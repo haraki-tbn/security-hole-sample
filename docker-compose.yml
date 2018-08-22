@@ -1,0 +1,22 @@
+version: '3'
+services:
+  dbserver:
+    build: mysql
+    volumes:
+      - ./mysql/sqls:/docker-entrypoint-initdb.d
+    environment:
+      - MYSQL_ROOT_PASSWORD=bs2g
+    ports:
+      - "3306:3306"
+    hostname: dbserver
+  webserver:
+    build: node
+    image: node-express-dev:1.0
+    container_name: node
+    tty: true
+    volumes:
+      - ./node/app:/app
+    ports:
+      - "8080:3000"
+    links:
+      - dbserver
