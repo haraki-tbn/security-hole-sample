@@ -25,9 +25,9 @@ CREATE TABLE user_customers (
   primary key (id)
 );
 
-INSERT INTO users(name, email, password, boss_id, role_id) values ('山本大輔', 'daisuke_yamamoto@abc.com', 'We49Iduf', 0, 1);
-INSERT INTO users(name, email, password, boss_id, role_id) values ('中村恵', 'megumi_nakamura@abc.com', 'Oh8R112Bdc', 1, 2);
-INSERT INTO users(name, email, password, boss_id, role_id) values ('加藤拓也', 'takuya_kato@abc.com', 'password', 1, 2);
+INSERT INTO users(name, email, password, boss_id, role_id) values ('山本大輔', 'daisuke_yamamoto@example.com', 'We49Iduf', 0, 1);
+INSERT INTO users(name, email, password, boss_id, role_id) values ('中村恵', 'megumi_nakamura@example.com', 'Oh8R112Bdc', 1, 2);
+INSERT INTO users(name, email, password, boss_id, role_id) values ('加藤拓也', 'takuya_kato@example.com', 'password', 1, 2);
 INSERT INTO customers(name, address) values ('佐藤翔', '東京都世田谷区水星１−１−１');
 INSERT INTO customers(name, address) values ('鈴木愛', '神奈川県横浜市金星２−２−２');
 INSERT INTO customers(name, address) values ('高橋誠', '千葉県船橋市火星３−３−３');

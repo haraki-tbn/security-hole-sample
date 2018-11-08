@@ -19,7 +19,7 @@ Webアプリを起動したら以下からアクセス可能
 http://localhost:8080/app/login
 
 ## 脆弱性
-1. takuya_kato@abc.comのパスワードが「password」なので推測されやすい
+1. takuya_kato@example.comのパスワードが「password」なので推測されやすい
 2. /app/menu画面のuseridパラメータに上司IDである1を指定すると全ての顧客情報がみれてしまう。
 3. localhost:8080/にアクセスでディレクトリの中がみれてしまう。
 
