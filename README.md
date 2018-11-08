@@ -13,13 +13,6 @@ $ docker-compose up -d
 停止
 $ docker-compose stop
 ```  
-DBは起動されるが、Webアプリは起動しないように設定しています。  
-Webアプリの起動はNode.JSのコンテナに入って直接起動してください。   
-Webアプリ起動方法は以下。 
-```
-$ docker exec -it node /bin/bash
-$ node app.js
-```
 
 ## アプリURL
 Webアプリを起動したら以下からアクセス可能  
@@ -27,7 +20,7 @@ http://localhost:8080/app/login
 
 ## 脆弱性
 1. takuya_kato@abc.comのパスワードが「password」なので推測されやすい
-2. /menu画面のuseridパラメータに上司IDである1を指定すると全ての顧客情報がみれてしまう。
+2. /app/menu画面のuseridパラメータに上司IDである1を指定すると全ての顧客情報がみれてしまう。
 3. localhost:8080/にアクセスでディレクトリの中がみれてしまう。
 
 
