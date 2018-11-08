@@ -9,14 +9,22 @@ services:
     ports:
       - "3306:3306"
     hostname: dbserver
-  webserver:
+  nodeapp:
     build: node
-    image: node-express-dev:1.0
     container_name: node
     tty: true
     volumes:
       - ./node/app:/app
     ports:
-      - "8080:3000"
+      - "3000:3000"
     links:
       - dbserver
+    command: node app.js
+  webserver:
+    build: nginx
+    volumes:
+      - ./nginx:/etc/nginx/conf.d:ro
+    ports:
+      - "8080:8080"
+    links:
+      - 'nodeapp'
