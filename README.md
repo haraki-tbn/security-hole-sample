@@ -27,7 +27,7 @@ http://localhost:8080/app/login
 
 ## 脆弱性
 1. takuya_kato@abc.comのパスワードが「password」なので推測されやすい
-2. /menu画面のuseridパラメータに上司IDである1を指定すると全ての顧客情報がみれてしまう。
+2. /menu画面のuseridパラメータに上司IDである1を指定すると全ての顧客情報がみれてしまう。
 3. localhost:8080/にアクセスでディレクトリの中がみれてしまう。
 
 
