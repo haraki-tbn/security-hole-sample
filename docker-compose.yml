@@ -9,6 +9,7 @@ services:
     ports:
       - "3306:3306"
     hostname: dbserver
+    platform: linux/amd64
   nodeapp:
     build: node
     container_name: node
@@ -19,7 +20,8 @@ services:
       - "3000:3000"
     links:
       - dbserver
-    command: node app.js
+    command: >
+      bash -c "npm install && node app.js"
   webserver:
     build: nginx
     volumes:
